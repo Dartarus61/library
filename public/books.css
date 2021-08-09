@@ -1,0 +1,71 @@
+.list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.book {
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    min-width: 220px;
+    min-height: 120px;
+    flex-grow: 0;
+    flex-basis: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.book > svg {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.book > svg:hover {
+    stroke: red;
+}
+
+.book > .bookName {
+    text-transform: uppercase;
+    font-size: 18px;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.book > .bookAuthor {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.book > .bookDesc {
+    position: absolute;
+    transform: translateY(100%);
+    left: 0;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    bottom: 0;
+    cursor: default;
+    padding: 0.5em;
+    background-color: #3b82f6;
+    color: #fff;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 80px;
+    font-size: 14px;
+}
+
+.book:hover > .bookDesc {
+    transform: translateY(0);
+}
