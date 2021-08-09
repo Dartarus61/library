@@ -1,0 +1,29 @@
+<div style="opacity: 0" id='addBookModal' class="modal">
+    <form id="addBook" action="/books/add" method="POST">
+        <div>
+            <label for="bookName">
+                Название
+            </label>
+            <input name="name" type="text" required id="bookName">
+        </div>
+        <div>
+            <label for="bookDesc">
+                Описание
+            </label>
+            <textarea name="description" rows="4" id="bookDesc"></textarea>
+        </div>
+        <div>
+            <label for="authorsSelect">Выберите автора</label>
+            <select name="authorId" id="authorsSelect">
+                <% if(authors && authors.length){ %>
+                    <% authors.forEach(author => { %>
+                        <option label="<%= author.name + ` ${author.surname||""}` %>" value="<%= author.id %>" />
+                    <% }) %>
+                <% } else { %>  
+                 <option disabled label="В приложении нет авторов"></option>
+                <% } %>
+            </select>
+        </div>
+        <button disabled type="submit">Добавить книгу</button>
+    </form>
+</div>

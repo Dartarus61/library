@@ -1,0 +1,15 @@
+<script defer src="authors.js"></script>
+<link rel="stylesheet" href="authors.css">
+<div class="list">
+
+    <%- include('./add.ejs') %> 
+
+    <% if(authors && authors.length){ %>
+        <% authors.forEach(author => { %> 
+            <%- include('./author.ejs', { author })  %> 
+    <% }) %>
+    <% } else{ %>  
+        <p>Авторов нет</p>
+    <% } %>
+    
+</div>
