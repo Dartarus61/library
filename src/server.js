@@ -29,7 +29,7 @@ app.use('/', (req, res) => {
 
 /*eslint-disable */
 app.use((err, req, res, next) => {
-    return res.status(500).send('Something broke!')
+    return res.status(err.statusCode || 500).json({ error: err.message || 'Something broke!' })
 })
 /*eslint-enable */
 

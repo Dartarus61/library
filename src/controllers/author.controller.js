@@ -20,11 +20,7 @@ authorsController.post('/create', createAuthorDto, async (req, res, next) => {
 
 authorsController.delete('/:id', removeAuthorDto, async (req, res, next) => {
     try {
-        const target = await AuthorService.getById(req.params.id)
-        if (target.books && target.books.length) {
-            return res.status(400).json({ error: 'Сперва удалите книги автора!' })
-        }
-        target.destroy()
+        await AuthorService.remove(req.params.id)
         res.status(200).send()
     } catch (error) {
         next(error)
