@@ -1,0 +1,19 @@
+<header>
+    <div style="display: flex; column-gap: 1em;
+    ">
+        <h1>MyLib</h1>
+        <% if (url=='/books') { %>
+            <button id='addBookButton'>Добавить книгу</button>
+        <% } %>
+
+        <% if (url=='/authors') { %>
+            <button id='addAuthorButton'>Добавить автора</button>
+        <% } %>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Книги</a></li>
+            <li><a href="/authors">Авторы</a></li>
+        </ul>
+    </nav>
+</header>

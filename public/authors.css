@@ -1,0 +1,44 @@
+.author {
+    position: relative;
+    background-color: #fff;
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+    padding: 0.5em 1em;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.author:first-child {
+    margin-top: 0;
+}
+
+.author #removeAuthor {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.5em;
+    cursor: pointer;
+}
+
+.author svg {
+    width: 1em;
+    height: 1em;
+}
+.author p {
+    cursor: default;
+}
+
+.author p:last-of-type {
+    margin-top: 0.5em;
+}
+.author #removeAuthor,
+.author #removeAuthor svg {
+    color: #6b7280;
+    stroke: #6b7280;
+}
+
+.author #removeAuthor:hover svg,
+.author #removeAuthor:hover {
+    stroke: red;
+    color: red;
+}

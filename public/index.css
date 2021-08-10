@@ -1,8 +1,48 @@
+@import url('./header.css');
+@import url('./modal.css');
+
 * {
     box-sizing: border-box;
     margin: 0;
+    --header-height: 3.5em;
+    color: #1f2937;
 }
+
 button {
-    padding: 16px;
-    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.5em;
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    background-color: #e5e7eb;
+}
+
+button:enabled:hover {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+button:disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+body {
+    height: 100vh;
+    background-color: #e5e7eb;
+}
+
+body > .content {
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding-top: calc(1em + var(--header-height));
+}
+
+body .list {
+    max-width: 768px;
+    padding: 0 1em;
+    margin: 0 auto;
 }

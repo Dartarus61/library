@@ -1,0 +1,17 @@
+<div style="opacity: 0" id='addAuthorModal' class="modal">
+    <form id="addAuthorForm" action="/authors/create" method="POST">
+        <div>
+            <label for="name">
+                Имя
+            </label>
+            <input min="3" name="name" type="text" required id="name">
+        </div>
+        <div>
+            <label for="surname">
+                Фамилия
+            </label>
+            <input min="3" name="surname" type="text" required id="surname">
+        </div>
+        <button disabled type="submit">Добавить автора</button>
+    </form>
+</div>

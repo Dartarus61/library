@@ -1,0 +1,3 @@
+*.ejs
+.build/
+node_modules/

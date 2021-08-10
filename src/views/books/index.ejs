@@ -1,0 +1,15 @@
+<script defer src="books.js"></script>
+<link rel="stylesheet" href="books.css">
+<div class="list">
+
+    <%- include('./add.ejs') %> 
+
+    <% if(books && books.length){ %>
+        <% books.forEach(book => { %> 
+            <%- include('./book.ejs', { book })  %> 
+    <% }) %>
+    <% } else{ %>  
+        <p>Книг нет</p>
+    <% } %>
+    
+</div>
