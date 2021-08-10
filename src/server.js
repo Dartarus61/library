@@ -27,10 +27,11 @@ app.use('/', (req, res) => {
     return res.redirect('/books')
 })
 
-// Catching errors
-app.use((err, req, res) => {
+/*eslint-disable */
+app.use((err, req, res, next) => {
     return res.status(500).send('Something broke!')
 })
+/*eslint-enable */
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`)
