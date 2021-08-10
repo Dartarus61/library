@@ -27,7 +27,7 @@ app.use('/', (req, res) => {
     return res.redirect('/books')
 })
 
-/*eslint-disable */
+/*eslint-disable no-unused-vars */
 app.use((err, req, res, next) => {
     return res.status(err.statusCode || 500).json({ error: err.message || 'Something broke!' })
 })

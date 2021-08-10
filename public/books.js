@@ -55,7 +55,7 @@ form.onsubmit = async function (e) {
     }
 }
 
-/*eslint-disable */
+/*eslint-disable no-unused-vars */
 async function removeBook(element, bookId) {
     try {
         await fetch(`/books/${bookId}`, {

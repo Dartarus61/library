@@ -53,7 +53,7 @@ form.onsubmit = async function (e) {
     }
 }
 
-/*eslint-disable */
+/*eslint-disable no-unused-vars */
 async function removeAuthor(element, authorId) {
     try {
         const res = await fetch(`/authors/${authorId}`, {
